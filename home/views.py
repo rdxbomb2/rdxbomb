@@ -61,8 +61,8 @@ def doattack(request):
     Producti.save()
 
 
-    if int(frequency_no) >= 51 :
-        frequency_no = "30"
+    if int(frequency_no) >= 101 :
+        frequency_no = "100"
 
 
 
@@ -116,7 +116,7 @@ def doattack(request):
 
 
     if len(awor) == 0:
-        datasend = {"texts": f"ALL SERVERS ARE BUSY TILL NOW PLEASE TRY SOME TIME LATER TRY AGAIN AFTER {round(int(totalsecleft),2)} Seconds"}
+        datasend = {"texts": f"ALL SERVERS ARE BUSY TILL NOW PLEASE TRY SOME TIME LATER TRY AGAIN AFTER IN {round(int(totalsecleft)/60,2)} MINUTE"}
         return render(request, 'attackresult.html', datasend)
 
     wrknn = awor[0].workername
